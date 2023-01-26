@@ -17,7 +17,7 @@ const {addProdToCart} = require ('./routes/carrito/addProdToCart.routes')
 app.use(express.json())
 
 app.use('/api/products', allProds)
-app.use('/api/products', productsById)
+app.use('/api/products', productsById) 
 app.use('/api/products', addProds)
 app.use('/api/products', updateProduct)
 app.use('/api/products', deleteById)
