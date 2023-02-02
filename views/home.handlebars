@@ -1,0 +1,27 @@
+<h1>Productos</h1>
+<div>
+  <h2>Agregar productos</h2>
+  <h3>Nombre</h3>
+  <input type="text" id="title" required>
+  <h3>Descripción</h3>
+  <input type="text" id="description" required>
+  <h3>Precio</h3>
+  <input type="text" id="price" required>
+  <h3>Imagen</h3>
+  <input type="text" id="thumnail">
+  <input type="submit" id="enviar">
+
+</div>
+
+<h2>Todos los productos</h2>
+{{#each allProd}}
+  <div>
+    <p>Nombre: {{title}}</p>
+    <p>Desc:{{description}}</p>
+    <p>Precio: {{price}}</p>
+    <img src="{{thumbnail}}" style="height: 200px"></img>
+  </div>
+{{/each}}
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>

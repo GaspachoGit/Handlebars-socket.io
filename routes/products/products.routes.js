@@ -1,7 +1,6 @@
 const {Router} = require('express')
 const allProds = Router()
 const prodManag = require ('../../productManager')
-const handlebars = require('express-handlebars')
 
 
 
@@ -20,12 +19,9 @@ allProds.get('/', async (req, res)=>{
     }
     return res.send(limitedProds)
   }
-  const usser = {
-    name: 'Tongas',
-    country: 'Arg'
-  }
-/*   res.send(allProd) */
-  res.render('index', allProd[1])
+
+  /* res.send(allProd) */
+  res.render('home.handlebars', {allProd})
 })
 
 module.exports = {
